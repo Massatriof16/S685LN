@@ -11,7 +11,7 @@
         vendor.sprd.hardware.biometrics.fingerprint@2.1-service.xml
         android.hardware.biometrics.fingerprint@2.1-service.xml
 -->
-<manifest version="4.0" type="device" target-level="7">
+<manifest version="4.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
