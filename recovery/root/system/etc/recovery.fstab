@@ -1,0 +1,20 @@
+/dev/block/dm-0                                     		/system                erofs                ro wait,slotselect,logical
+system_ext                                     		/system_ext                erofs                ro wait,slotselect,logical
+vendor                                     		/vendor                erofs                ro wait,slotselect,logical
+product                                    		/product               erofs                ro wait,slotselect,logical
+vendor_dlkm                                   /vendor_dlkm           erofs                ro wait,slotselect,logical
+system_dlkm /system_dlkm erofs ro wait,logical,slotselect
+
+/dev/block/sda51 /metadata f2fs nodev,noatime,nosuid wait,formattable,first_stage_mount,check
+/dev/block/sda51 /metadata ext4 nodev,noatime,nosuid,errors=panic wait,formattable,first_stage_mount,check
+/dev/block/sda75 /data f2fs noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,inline_xattr,inline_data,inlinecrypt,fsync_mode=nobarrier,atgc latemount,wait,quota,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,reservedsize=128M,checkpoint=fs,formattable
+/dev/block/sda47 /cache f2fs noatime,nosuid,nodev,discard wait,check,formattable
+/dev/block/sda47 /cache ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc wait,check,formattable
+/dev/block/sda3 /misc emmc defaults defaults
+/dev/block/sda48 /blackbox ext4 noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc check
+/dev/block/sda48 /blackbox f2fs noatime,nosuid,nodev,discard check
+/dev/block/sda3 /misc emmc defaults defaults
+/dev/block/by-name/boot /boot emmc defaults slotselect
+/dev/block/sd19 /persist emmc defaults defaults
+/dev/block/sda2 /miscdata emmc defaults defaults
+/dev/block/sda46 /super emmc default default
