@@ -6,7 +6,7 @@ symlink
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
-symlink /system /dev/block/dm-0
+symlink /system_root /dev/block/dm-0
 symlink /vendor /dev/block/dm-2
 symlink /product /dev/block/dm-3
 symlink /system_ext /dev/block/dm-1
