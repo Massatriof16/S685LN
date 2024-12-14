@@ -1,7 +1,7 @@
 # device/sprd/vnd_mpool/module/vendor/audio/main.ueventd.rc
 # SPDX-FileCopyrightText: 2016-2023 Unisoc (Shanghai) Technologies Co., Ltd
 # SPDX-License-Identifier: LicenseRef-Unisoc-General-1.0
-
+import /ueventd_system.rc
 /dev/apipe-pcm          0660     system      audio
 /dev/apipe-cmd-in       0660     system      audio
 /dev/apipe-cmd-out      0660     system      audio
