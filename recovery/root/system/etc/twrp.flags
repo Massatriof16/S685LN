@@ -42,21 +42,21 @@
 /vendor_dlkm_image              emmc      /dev/block/dm-5                           flags=display="Vendor_DLKM Image";flashimg=1;backup=1
 /system_dlkm_image              emmc      /dev/block/dm-6                           flags=display="System_DLKM Image";flashimg=1;backup=1
 
-/system_image          emmc      /dev/block/mapper/system_a                              flags=display="System Image ";flashimg=1;backup=1
-/vendor_image          emmc      /dev/block/mapper/vendor_a                                  flags=display="Vendor Image ";flashimg=1;backup=1
-/product_image          emmc      /dev/block/mapper/product_a  flags=display="Product Image ";flashimg=1;backup=1
-/system_ext_image       emmc      /dev/block/mapper/system_ext_a                            flags=display="System_EXT Image ";flashimg=1;backup=1
-/odm_image                   emmc      /dev/block/mapper/odm_a                                   flags=display="Odm Image";flashimg=1;backup=1
-/vendor_dlkm_image              emmc      /dev/block/mapper/vendor_dlkm_a                           flags=display="Vendor_DLKM Image";flashimg=1;backup=1
-/system_dlkm_image              emmc      /dev/block/mapper/system_dlkm_a                           flags=display="System_DLKM Image";flashimg=1;backup=1
+/system_image_a          emmc      /dev/block/mapper/system_a                              flags=display="System Image A";flashimg=1;backup=1
+/vendor_image_a          emmc      /dev/block/mapper/vendor_a                                  flags=display="Vendor Image A ";flashimg=1;backup=1
+/product_image_a          emmc      /dev/block/mapper/product_a  flags=display="Product Image A";flashimg=1;backup=1
+/system_ext_image_a       emmc      /dev/block/mapper/system_ext_a                            flags=display="System_EXT Image A";flashimg=1;backup=1
+/odm_image_a                   emmc      /dev/block/mapper/odm_a                                   flags=display="Odm Image A";flashimg=1;backup=1
+/vendor_dlkm_image_a              emmc      /dev/block/mapper/vendor_dlkm_a                           flags=display="Vendor_DLKM Image A";flashimg=1;backup=1
+/system_dlkm_image_a              emmc      /dev/block/mapper/system_dlkm_a                           flags=display="System_DLKM Image A";flashimg=1;backup=1
 
-/system_image          emmc      /dev/block/mapper/system_b                              flags=display="System Image ";flashimg=1;backup=1
-/vendor_image          emmc      /dev/block/mapper/vendor_b                                  flags=display="Vendor Image ";flashimg=1;backup=1
-/product_image          emmc      /dev/block/mapper/product_b  flags=display="Product Image ";flashimg=1;backup=1
-/system_ext_image       emmc      /dev/block/mapper/system_ext_b                            flags=display="System_EXT Image ";flashimg=1;backup=1
-/odm_image                   emmc      /dev/block/mapper/odm_b                                   flags=display="Odm Image";flashimg=1;backup=1
-/vendor_dlkm_image              emmc      /dev/block/mapper/vendor_dlkm_b                           flags=display="Vendor_DLKM Image";flashimg=1;backup=1
-/system_dlkm_image              emmc      /dev/block/mapper/system_dlkm_b                           flags=display="System_DLKM Image";flashimg=1;backup=1
+/system_image_b          emmc      /dev/block/mapper/system_b                              flags=display="System Image B";flashimg=1;backup=1
+/vendor_image_b          emmc      /dev/block/mapper/vendor_b                                  flags=display="Vendor Image B";flashimg=1;backup=1
+/product_image_b          emmc      /dev/block/mapper/product_b  flags=display="Product Image B";flashimg=1;backup=1
+/system_ext_image_b       emmc      /dev/block/mapper/system_ext_b                            flags=display="System_EXT Image B";flashimg=1;backup=1
+/odm_image_b                  emmc      /dev/block/mapper/odm_b                                   flags=display="Odm Image B";flashimg=1;backup=1
+/vendor_dlkm_image_b             emmc      /dev/block/mapper/vendor_dlkm_b                           flags=display="Vendor_DLKM Image B";flashimg=1;backup=1
+/system_dlkm_image_b              emmc      /dev/block/mapper/system_dlkm_b                           flags=display="System_DLKM Image B";flashimg=1;backup=1
 
 
 /super                    emmc         /dev/block/sda46                  flags=display="Super";flashimg
