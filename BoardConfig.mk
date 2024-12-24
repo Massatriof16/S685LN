@@ -58,7 +58,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_VENDOR_BASE := 0x00000000
 # TODO: remove "androidboot.." from kernel cmdline after verification
-BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 bootconfig bootconfig
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_KERNEL_OFFSET := 0x00008000
