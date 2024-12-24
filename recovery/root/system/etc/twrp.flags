@@ -1,0 +1,79 @@
+# mount point       fstype    device                                                                flags
+
+## User-writable / Storage partitions
+/boot_a			        emmc	/dev/block/sda36			flags=display="boot a";backup=1;flashimg=1
+/boot-b			        emmc	/dev/block/sda37			flags=display="boot b";backup=1;flashimg=1
+/dtbo_a			        emmc 	/dev/block/sda44 		        flags=display="dtbo a";backup=1;flashimg=1
+/dtbo_b			        emmc 	/dev/block/sda55 		        flags=display="dtbo b";backup=1;flashimg=1
+#/dtb			        emmc 	/dev/block/by-name/dtb 		        flags=display="dtb";backup=1;flashimg=1;slotselect
+/vendor_boot_a        emmc      /dev/block/sda38                    flags=display="Vendor Boot a";flashimg=1;backup=1
+/vendor_boot_b        emmc      /dev/block/sda39                    flags=display="Vendor Boot b";flashimg=1;backup=1
+
+
+# VERIFY BOOT
+
+/vbmeta                         emmc    /dev/block/sda49      /dev/block/sda50             flags=display="VBMeta";backup=1;flashimg=1;slotselect
+/vbmeta_system                  emmc    /dev/block/sda53 /dev/block/sda54            flags=display="VBMeta_system";backup=1;flashimg=1;slotselect
+/vbmeta_vendor                  emmc    /dev/block/sda55 /dev/block/sda56            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+
+/vbmeta_odm                  emmc    /dev/block/sda61 /dev/block/sda62            flags=display="VBMeta_vendor";backup=1;flashimg=1;slotselect
+
+/vbmeta_product                  emmc    /dev/block/sda59 /dev/block/sda60            flags=display="VBMeta_product";backup=1;flashimg=1;slotselect
+
+
+
+
+## Firmware
+
+
+/misc emmc /dev/block/sda3  
+
+/persist emmc /dev/block/sda19 flags=display="Persist";flashimg
+/logo emmc /dev/block/sda11 flags=display="logo";
+/fbootlogo emmc /dev/block/by-name/fbootlogo flags=display="fbootlogo"
+/tranfs ext4 /dev/block/sda70 flags=display="tranfs"
+/miscdata emmc /dev/block/sda2 flags=display="miscdata"
+
+/system_image          emmc      /dev/block/dm-0                              flags=display="System Image ";flashimg=1;backup=1
+/vendor_image          emmc      /dev/block/dm-2                                  flags=display="Vendor Image ";flashimg=1;backup=1
+/product_image          emmc      /dev/block/dm-3                                 flags=display="Product Image ";flashimg=1;backup=1
+/system_ext_image       emmc      /dev/block/dm-1                            flags=display="System_EXT Image ";flashimg=1;backup=1
+/odm_image                   emmc      /dev/block/dm-4                                   flags=display="Odm Image";flashimg=1;backup=1
+/vendor_dlkm_image              emmc      /dev/block/dm-5                           flags=display="Vendor_DLKM Image";flashimg=1;backup=1
+/system_dlkm_image              emmc      /dev/block/dm-6                           flags=display="System_DLKM Image";flashimg=1;backup=1
+
+/system_image_a          emmc      /dev/block/mapper/system_a                              flags=display="System Image A";flashimg=1;backup=1
+/vendor_image_a          emmc      /dev/block/mapper/vendor_a                                  flags=display="Vendor Image A ";flashimg=1;backup=1
+/product_image_a          emmc      /dev/block/mapper/product_a  flags=display="Product Image A";flashimg=1;backup=1
+/system_ext_image_a       emmc      /dev/block/mapper/system_ext_a                            flags=display="System_EXT Image A";flashimg=1;backup=1
+/odm_image_a                   emmc      /dev/block/mapper/odm_a                                   flags=display="Odm Image A";flashimg=1;backup=1
+/vendor_dlkm_image_a              emmc      /dev/block/mapper/vendor_dlkm_a                           flags=display="Vendor_DLKM Image A";flashimg=1;backup=1
+/system_dlkm_image_a              emmc      /dev/block/mapper/system_dlkm_a                           flags=display="System_DLKM Image A";flashimg=1;backup=1
+
+/system_image_b          emmc      /dev/block/mapper/system_b                              flags=display="System Image B";flashimg=1;backup=1
+/vendor_image_b          emmc      /dev/block/mapper/vendor_b                                  flags=display="Vendor Image B";flashimg=1;backup=1
+/product_image_b          emmc      /dev/block/mapper/product_b  flags=display="Product Image B";flashimg=1;backup=1
+/system_ext_image_b       emmc      /dev/block/mapper/system_ext_b                            flags=display="System_EXT Image B";flashimg=1;backup=1
+/odm_image_b                  emmc      /dev/block/mapper/odm_b                                   flags=display="Odm Image B";flashimg=1;backup=1
+/vendor_dlkm_image_b             emmc      /dev/block/mapper/vendor_dlkm_b                           flags=display="Vendor_DLKM Image B";flashimg=1;backup=1
+/system_dlkm_image_b              emmc      /dev/block/mapper/system_dlkm_b                           flags=display="System_DLKM Image B";flashimg=1;backup=1
+
+
+/super                    emmc         /dev/block/sda46                  flags=display="Super";flashimg
+/userdata_default                 emmc       /dev/block/sda75                 flags=display="Userdata default";flashimg
+
+
+# Dynamic Partitions ( A Slots )
+
+
+
+# Removable storage
+/external_sd		auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="External SDcard";storage;wipeingui;removable;backup=0
+/usbotg				auto    /dev/block/sda1			/dev/block/sda				flags=display="Usb-Otg";storage;wipeingui;removable;backup=0
+
+
+/data auto /dev/block/by-name/userdata flags=display="Data"
+
+
+## Internal storage (for OrangeFox)
+#/storage            f2fs      /data/media/0                                                         flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;
